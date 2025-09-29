@@ -5,13 +5,15 @@ public class Entidades {
     protected String nombre;
     protected int velocidad;
     protected int defensa;
+    boolean vivoOmuerto;
 
-    public Entidades (double vida, int ataque, String nombre, int velocidad, int defensa) {
+    public Entidades (double vida, int ataque, String nombre, int velocidad, int defensa, boolean vivoOmuerto) {
         this.vida = vida;
         this.ataque = ataque;
         this.nombre = nombre;
         this.velocidad = velocidad;
         this.defensa = defensa;
+        this.vivoOmuerto = vivoOmuerto;
     }
 
     public double getVida () {
@@ -34,6 +36,10 @@ public class Entidades {
         return defensa;
     }
 
+    public boolean getVivoOMuerto () {
+        return vivoOmuerto;
+    }
+
      public void setVida (double vida) {
         this.vida = vida;
     }
@@ -52,5 +58,21 @@ public class Entidades {
 
     public void setDefensa (int defensa) {
         this.defensa = defensa;
+    }
+
+    public void setVivoOMuerto (boolean vivoOmuerto)  {
+        this.vivoOmuerto = vivoOmuerto;
+    }
+
+    public boolean personajeMurio () {
+
+        if (vida != 0) {
+            this.vivoOmuerto = true;
+            return this.vivoOmuerto;
+        }
+        else {
+            this.vivoOmuerto = false;
+            return this.vivoOmuerto;
+        }
     }
 }
