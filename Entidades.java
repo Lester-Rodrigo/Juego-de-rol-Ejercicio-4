@@ -5,15 +5,17 @@ public class Entidades {
     protected String nombre;
     protected int velocidad;
     protected int defensa;
-    boolean vivoOmuerto;
+    protected boolean vivoOmuerto;
+    protected boolean agotado; 
 
-    public Entidades (double vida, int ataque, String nombre, int velocidad, int defensa, boolean vivoOmuerto) {
+    public Entidades (double vida, int ataque, String nombre, int velocidad, int defensa, boolean vivoOmuerto, boolean agotado) {
         this.vida = vida;
         this.ataque = ataque;
         this.nombre = nombre;
         this.velocidad = velocidad;
         this.defensa = defensa;
         this.vivoOmuerto = vivoOmuerto;
+        this.agotado = agotado;
     }
 
     public double getVida () {
@@ -40,6 +42,10 @@ public class Entidades {
         return vivoOmuerto;
     }
 
+    public boolean getAgotado() {
+        return agotado;
+    }
+
      public void setVida (double vida) {
         this.vida = vida;
     }
@@ -64,9 +70,13 @@ public class Entidades {
         this.vivoOmuerto = vivoOmuerto;
     }
 
+    public void setAgotado (boolean agotado)  {
+        this.agotado = agotado;
+    }
+
     public boolean personajeMurio () {
 
-        if (vida != 0) {
+        if (vida > 0) {
             this.vivoOmuerto = true;
             return this.vivoOmuerto;
         }

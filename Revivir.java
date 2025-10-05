@@ -23,7 +23,7 @@ public class Revivir extends Habilidades{
     }
     
     public void Resureccion (Monstruos monstruo) {
-        if (monstruo.getHabilidades().activarHabilidad() == true && monstruo.getVivoOMuerto() == false) {
+        if (monstruo.getHabilidad().activarHabilidad() == true && monstruo.getVivoOMuerto() == false) {
             monstruo.setVivoOMuerto(true);
         }
         else {

@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class Regeneracion extends Habilidades{
 
-    public Regeneracion(String nombre, String tipo) {
-        super(nombre, tipo);
+    public Regeneracion() {
+        super("Regeneración", "No muerto");
     }
     
     @Override
