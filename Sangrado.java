@@ -21,7 +21,7 @@ public class Sangrado extends Habilidades{
             }
         }
 
-    public void Regenerar (Heroe heroe, Monstruos monstruo) {
+    public void Cortar (Heroe heroe, Monstruos monstruo) {
         if (this.activarHabilidad() == true) {
             if (monstruo.getAtaque() > heroe.getDefensa()) {
                 double sangrePerdida = (monstruo.getAtaque()*30)/100; 

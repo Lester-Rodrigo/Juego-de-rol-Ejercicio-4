@@ -14,10 +14,6 @@ public class Controlador {
     private Regeneracion regenerar = new Regeneracion();
     private Acido acido = new Acido();
     private Sangrado sangrado = new Sangrado();
-    Zombie zombie = new Zombie(revivir);
-    Slime slime = new Slime(acido);
-    Vampiro vampiro = new Vampiro(sangrado, regenerar);
-    ReySlime reySlime = new ReySlime(regenerar, acido);
 
 
     public String crearPersonaje (int opcion, String nombre) {
@@ -36,6 +32,10 @@ public class Controlador {
     }
 
     public void crearOleada () {
+        Zombie zombie = new Zombie(revivir);
+        Slime slime = new Slime(acido);
+        Vampiro vampiro = new Vampiro(sangrado, regenerar);
+        ReySlime reySlime = new ReySlime(regenerar, acido);
         mostruosDisponibles.add(zombie);
         mostruosDisponibles.add(vampiro);
         mostruosDisponibles.add(slime);
